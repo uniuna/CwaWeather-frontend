@@ -1,0 +1,32 @@
+<svg width="512" height="512" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glow-pink" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect x="0" y="0" width="64" height="64" rx="16" fill="#050505"/>
+  
+  <path d="M0 32 H64 M32 0 V64" stroke="#00E5FF" stroke-opacity="0.1" stroke-width="1"/>
+
+  <path d="M16 34 A 8 8 0 0 1 24 20 A 12 12 0 0 1 46 24 A 8 8 0 0 1 50 38 L 18 38 Z" 
+        fill="none" stroke="#00E5FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+        filter="url(#glow-cyan)"/>
+
+  <path d="M34 26 L 26 38 H 32 L 28 50 L 40 34 H 32 Z" 
+        fill="#FF0054" stroke="#FF0054" stroke-width="1"
+        filter="url(#glow-pink)"/>
+        
+  <rect x="10" y="44" width="20" height="2" fill="#00E5FF" opacity="0.6" />
+</svg>
